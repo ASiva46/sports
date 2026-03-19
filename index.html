@@ -1,0 +1,1566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Cricket Bat Store | Premium English & Kashmir Willow</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:'Playfair Display',serif;
+        }
+
+        :root{
+            --navy:#0b2545;
+            --cream:#fcf9f5;
+            --ivory:#fffcf7;
+            --gold:#c6a43f;
+            --charcoal:#2a2b2a;
+            --light-charcoal:#4a4b4a;
+        }
+
+        body{
+            background:var(--cream);
+            color:var(--charcoal);
+        }
+
+        h1,h2,h3,h4,.heading-font{
+            font-family:'Playfair Display',serif;
+            font-weight:600;
+            letter-spacing:-0.02em;
+        }
+
+        a{
+            text-decoration:none;
+            color:inherit;
+        }
+
+        .container{
+            max-width:1400px;
+            margin:0 auto;
+            padding:0 2rem;
+        }
+
+        .top-bar{
+            background:var(--gold);
+            color:var(--navy);
+            text-align:center;
+            padding:0.75rem 1rem;
+            font-size:0.95rem;
+            font-weight:600;
+        }
+
+        .btn-gold{
+            background:var(--gold);
+            color:var(--navy);
+            border:none;
+            padding:0.8rem 1.8rem;
+            font-weight:600;
+            cursor:pointer;
+            transition:0.3s;
+        }
+
+        .btn-gold:hover{
+            background:#b6902e;
+            transform:translateY(-2px);
+            box-shadow:0 8px 18px rgba(198,164,63,0.25);
+        }
+
+        .btn-outline-gold{
+            border:1px solid var(--gold);
+            color:var(--gold);
+            background:transparent;
+            padding:0.75rem 1.4rem;
+            cursor:pointer;
+            transition:0.3s;
+        }
+
+        .btn-outline-gold:hover{
+            background:var(--gold);
+            color:var(--navy);
+        }
+
+        .card{
+            background:#fff;
+            border:1px solid rgba(198,164,63,0.12);
+            box-shadow:0 8px 20px rgba(0,0,0,0.03), 0 2px 6px rgba(0,0,0,0.05);
+            transition:0.35s;
+        }
+
+        .card:hover{
+            transform:translateY(-5px);
+            box-shadow:0 18px 30px rgba(11,37,69,0.12);
+        }
+
+        .fade-in{
+            animation:fadeIn 0.8s ease forwards;
+        }
+
+        @keyframes fadeIn{
+            0%{opacity:0;transform:translateY(10px);}
+            100%{opacity:1;transform:translateY(0);}
+        }
+
+        .navbar{
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            padding:1.3rem 2rem;
+            background:var(--navy);
+            color:var(--cream);
+            flex-wrap:wrap;
+            gap:1rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo{
+            font-family:'Playfair Display',serif;
+            font-size:1.8rem;
+            font-weight:700;
+        }
+
+        .logo span{
+            color:var(--gold);
+        }
+
+        .nav-links{
+            display:flex;
+            gap:2rem;
+            align-items:center;
+            flex-wrap:wrap;
+        }
+
+        .nav-links a{
+            color:var(--cream);
+            transition:0.2s;
+            border-bottom:1px solid transparent;
+            padding-bottom:0.2rem;
+        }
+
+        .nav-links a:hover{
+            color:var(--gold);
+            border-bottom-color:var(--gold);
+        }
+
+        .search-cart{
+            display:flex;
+            gap:1rem;
+            align-items:center;
+        }
+
+        .search-cart i{
+            font-size:1.2rem;
+            cursor:pointer;
+            transition:0.2s;
+        }
+
+        .search-cart i:hover{
+            color:var(--gold);
+        }
+
+        .cart-badge{
+            position:relative;
+        }
+
+        .cart-count{
+            position:absolute;
+            top:-8px;
+            right:-10px;
+            background:var(--gold);
+            color:var(--navy);
+            font-size:0.7rem;
+            padding:2px 6px;
+            border-radius:20px;
+            font-weight:700;
+        }
+
+        .hero{
+            background:linear-gradient(120deg,var(--navy) 30%, #17375c 100%);
+            color:#fff;
+            padding:5rem 2rem;
+            margin-bottom:3rem;
+        }
+
+        .hero-content{
+            max-width:650px;
+        }
+
+        .hero h1{
+            font-size:3.5rem;
+            line-height:1.1;
+            color:var(--cream);
+        }
+
+        .hero p{
+            font-size:1.15rem;
+            margin:1.5rem 0;
+            opacity:0.95;
+        }
+
+        .search-bar{
+            display:flex;
+            max-width:520px;
+            background:#fff;
+            overflow:hidden;
+        }
+
+        .search-bar input{
+            flex:1;
+            padding:1rem;
+            border:none;
+            outline:none;
+            font-size:1rem;
+        }
+
+        .search-bar button{
+            background:var(--gold);
+            border:none;
+            padding:0 1.5rem;
+            cursor:pointer;
+        }
+
+        .search-bar button:hover{
+            background:#b6902e;
+        }
+
+        .section-title{
+            margin:3rem 0 1.5rem;
+            font-size:2rem;
+        }
+
+        .category-pills{
+            display:flex;
+            gap:1rem;
+            flex-wrap:wrap;
+            margin:2rem 0 3rem;
+        }
+
+        .pill{
+            background:#fff;
+            border:1px solid #e3d9ce;
+            padding:0.6rem 1.4rem;
+            border-radius:40px;
+            cursor:pointer;
+            transition:0.25s;
+        }
+
+        .pill:hover,
+        .pill.active{
+            background:var(--navy);
+            color:var(--cream);
+            border-color:var(--navy);
+        }
+
+        .products-grid{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+            gap:2rem;
+            margin:2rem 0 4rem;
+        }
+
+        .product-card{
+            padding:1.4rem;
+            display:flex;
+            flex-direction:column;
+        }
+
+        .product-img{
+            width:100%;
+            height:220px;
+            background:#f0ebe4;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            font-size:3.2rem;
+            color:var(--navy);
+            margin-bottom:1rem;
+            border:1px solid rgba(198,164,63,0.18);
+        }
+
+        .product-category{
+            font-size:0.8rem;
+            text-transform:uppercase;
+            letter-spacing:1px;
+            color:var(--gold);
+        }
+
+        .product-title{
+            font-family:'Playfair Display',serif;
+            font-size:1.25rem;
+            margin:0.4rem 0;
+        }
+
+        .product-price{
+            font-size:1.3rem;
+            font-weight:700;
+            color:var(--navy);
+        }
+
+        .product-rating{
+            color:var(--gold);
+            margin:0.4rem 0;
+        }
+
+        .product-actions{
+            display:flex;
+            gap:0.8rem;
+            margin-top:1rem;
+            flex-wrap:wrap;
+        }
+
+        .promo-banner{
+            background:linear-gradient(135deg,var(--navy),#18395f);
+            color:#fff;
+            padding:2rem;
+            margin:3rem 0;
+            border-left:5px solid var(--gold);
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            gap:1rem;
+            flex-wrap:wrap;
+        }
+
+        .benefits-grid{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+            gap:1.5rem;
+            margin:2rem 0 4rem;
+        }
+
+        .benefit-card{
+            background:#fff;
+            padding:1.5rem;
+            border:1px solid rgba(198,164,63,0.15);
+            box-shadow:0 8px 20px rgba(0,0,0,0.03);
+            text-align:center;
+        }
+
+        .benefit-card i{
+            font-size:2rem;
+            color:var(--gold);
+            margin-bottom:1rem;
+        }
+
+        .craft-grid{
+            display:flex;
+            gap:2rem;
+            margin:4rem 0;
+            flex-wrap:wrap;
+            background:var(--ivory);
+            padding:3rem;
+            border:1px solid rgba(198,164,63,0.15);
+        }
+
+        .craft-item{
+            flex:1;
+            min-width:250px;
+        }
+
+        .craft-item i{
+            font-size:2.8rem;
+            color:var(--gold);
+            margin-bottom:1rem;
+        }
+
+        .process-steps{
+            display:flex;
+            gap:2rem;
+            justify-content:center;
+            flex-wrap:wrap;
+            margin:4rem 0;
+        }
+
+        .step{
+            text-align:center;
+            max-width:200px;
+        }
+
+        .step-icon{
+            width:70px;
+            height:70px;
+            border-radius:50%;
+            background:var(--navy);
+            color:var(--gold);
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            font-size:1.4rem;
+            margin:0 auto 1rem;
+            font-weight:700;
+        }
+
+        .testimonials-grid{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+            gap:1.5rem;
+            margin:2rem 0 4rem;
+        }
+
+        .testimonial-card{
+            background:#fff;
+            padding:1.5rem;
+            border:1px solid rgba(198,164,63,0.15);
+            box-shadow:0 8px 20px rgba(0,0,0,0.03);
+        }
+
+        .testimonial-card p{
+            color:var(--light-charcoal);
+            line-height:1.6;
+            margin-bottom:1rem;
+        }
+
+        .testimonial-name{
+            font-weight:700;
+            color:var(--navy);
+        }
+
+        .newsletter{
+            background:var(--ivory);
+            padding:2.5rem;
+            margin:3rem 0;
+            border:1px solid rgba(198,164,63,0.2);
+            text-align:center;
+        }
+
+        .newsletter-form{
+            display:flex;
+            justify-content:center;
+            gap:1rem;
+            flex-wrap:wrap;
+            margin-top:1rem;
+        }
+
+        .newsletter-form input{
+            max-width:350px;
+            background:#fff;
+        }
+
+        .faq-section{
+            margin:3rem 0 4rem;
+        }
+
+        .faq-item{
+            background:#fff;
+            border:1px solid #e8dfd3;
+            margin-bottom:1rem;
+            padding:1rem 1.2rem;
+            cursor:pointer;
+        }
+
+        .faq-question{
+            font-weight:600;
+            color:var(--navy);
+        }
+
+        .faq-answer{
+            margin-top:0.8rem;
+            color:var(--light-charcoal);
+            display:none;
+            line-height:1.6;
+        }
+
+        .faq-item.active .faq-answer{
+            display:block;
+        }
+
+        .filter-group{
+            margin:1rem 0 2rem;
+            display:flex;
+            gap:1rem;
+            flex-wrap:wrap;
+            align-items:center;
+        }
+
+        .filter-select{
+            padding:0.7rem;
+            min-width:160px;
+            border:1px solid #ddd;
+            background:#fff;
+        }
+
+        .detail-container{
+            display:flex;
+            gap:3rem;
+            flex-wrap:wrap;
+            background:#fff;
+            padding:2rem;
+            margin:2rem 0;
+            border:1px solid #eee;
+        }
+
+        .detail-gallery{
+            flex:1 1 300px;
+            background:#f8f4ef;
+            min-height:350px;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            font-size:6rem;
+            color:var(--navy);
+        }
+
+        .detail-info{
+            flex:1 1 400px;
+        }
+
+        .detail-price{
+            font-size:2rem;
+            color:var(--navy);
+            margin:1rem 0;
+            font-weight:700;
+        }
+
+        .rating-lg{
+            color:var(--gold);
+            font-size:1.2rem;
+            margin:0.5rem 0;
+        }
+
+        .desc{
+            line-height:1.7;
+            color:var(--light-charcoal);
+        }
+
+        .button-group{
+            display:flex;
+            gap:1rem;
+            margin:2rem 0;
+            flex-wrap:wrap;
+        }
+
+        .cart-item{
+            display:flex;
+            gap:2rem;
+            align-items:center;
+            background:#fff;
+            padding:1.5rem;
+            margin-bottom:1rem;
+            flex-wrap:wrap;
+            border:1px solid #f0e4d5;
+        }
+
+        .cart-img{
+            width:80px;
+            height:80px;
+            background:#e8e0d6;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            font-size:2rem;
+        }
+
+        .cart-details{
+            flex:2;
+            min-width:200px;
+        }
+
+        .cart-qty{
+            display:flex;
+            align-items:center;
+            gap:0.5rem;
+        }
+
+        .cart-qty button{
+            background:none;
+            border:1px solid #ccc;
+            width:32px;
+            height:32px;
+            cursor:pointer;
+            font-size:1.1rem;
+        }
+
+        .cart-total{
+            text-align:right;
+            font-size:1.5rem;
+            margin:2rem 0;
+            font-weight:700;
+            color:var(--navy);
+        }
+
+        .checkout-form{
+            display:grid;
+            grid-template-columns:1fr 1fr;
+            gap:1.5rem;
+            background:#fff;
+            padding:2rem;
+            margin:2rem 0;
+        }
+
+        .form-group{
+            display:flex;
+            flex-direction:column;
+        }
+
+        .form-group.full{
+            grid-column:span 2;
+        }
+
+        input, textarea, select{
+            width:100%;
+            padding:0.85rem;
+            border:1px solid #ddd;
+            background:var(--cream);
+            outline:none;
+        }
+
+        label{
+            margin-bottom:0.5rem;
+            font-weight:500;
+        }
+
+        .order-confirm-card{
+            background:#fff;
+            padding:2rem;
+            border-left:4px solid var(--gold);
+            margin:2rem 0;
+        }
+
+        .admin-section{
+            background:#fff;
+            padding:2rem;
+            margin:2rem 0;
+            border:1px solid var(--gold);
+        }
+
+        .admin-tabs{
+            display:flex;
+            gap:1rem;
+            margin-bottom:2rem;
+            border-bottom:1px solid #ddd;
+            flex-wrap:wrap;
+        }
+
+        .admin-tab{
+            padding:0.7rem 1.5rem;
+            border:none;
+            background:none;
+            cursor:pointer;
+            font-weight:500;
+        }
+
+        .admin-tab.active{
+            background:var(--navy);
+            color:#fff;
+        }
+
+        .admin-table{
+            width:100%;
+            border-collapse:collapse;
+        }
+
+        .admin-table th{
+            background:var(--navy);
+            color:#fff;
+            padding:0.8rem;
+            text-align:left;
+        }
+
+        .admin-table td{
+            padding:0.9rem;
+            border-bottom:1px solid #eee;
+        }
+
+        .admin-actions i{
+            margin-right:0.8rem;
+            cursor:pointer;
+            color:var(--navy);
+        }
+
+        .admin-actions i:hover{
+            color:var(--gold);
+        }
+
+        .footer{
+            background:var(--navy);
+            color:var(--cream);
+            padding:3rem 2rem;
+            margin-top:4rem;
+        }
+
+        .hidden{
+            display:none;
+        }
+
+        .page{
+            display:none;
+        }
+
+        .active-page{
+            display:block;
+        }
+
+        @media (max-width:768px){
+            .navbar{
+                flex-direction:column;
+            }
+
+            .nav-links{
+                justify-content:center;
+            }
+
+            .hero h1{
+                font-size:2.4rem;
+            }
+
+            .checkout-form{
+                grid-template-columns:1fr;
+            }
+
+            .form-group.full{
+                grid-column:span 1;
+            }
+
+            .cart-item{
+                flex-direction:column;
+                align-items:flex-start;
+            }
+
+            .footer div[style*="display: grid"]{
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    
+
+    <nav class="navbar">
+        <div class="logo">Cricket Bat <span>Store</span></div>
+
+        <div class="nav-links">
+            <a href="#" data-page="home">Home</a>
+            <a href="#" data-page="products">Shop</a>
+            <a href="#" data-page="about">Craftsmanship</a>
+            <a href="#" data-page="contact">Appointment</a>
+            <a href="#" data-page="admin">Admin</a>
+
+            <div class="search-cart">
+                <i class="fas fa-search"></i>
+                <div class="cart-badge">
+                    <i class="fas fa-shopping-cart" data-page="cart"></i>
+                    <span class="cart-count" id="cartCount">0</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div id="app">
+        <!-- HOME PAGE -->
+        <div id="home-page" class="page active-page">
+            <section class="hero">
+                <div class="hero-content container fade-in">
+                    <h1>Where willow meets<br><span style="color: var(--gold);">craftsmanship</span></h1>
+                    <p>English & Kashmir Willow bats from the world’s finest makers. MRF, SG, GM, CA, DSC, and more.</p>
+                    <div class="search-bar">
+                        <input type="text" placeholder="Search for your bat... (e.g. MRF)" id="homeSearch">
+                        <button id="homeSearchBtn"><i class="fas fa-arrow-right"></i></button>
+                    </div>
+                </div>
+            </section>
+
+            <div class="container">
+                <div class="category-pills">
+                    <span class="pill active" data-willow="all">All Willow</span>
+                    <span class="pill" data-willow="English">English Willow</span>
+                    <span class="pill" data-willow="Kashmir">Kashmir Willow</span>
+                </div>
+
+                <h2 class="heading-font section-title">Featured Bats</h2>
+                <div class="products-grid" id="featured-grid"></div>
+
+                <div class="promo-banner">
+                    <div>
+                        <h3 class="heading-font">Special Offer on English Willow Bats</h3>
+                        <p>Get 10% off on selected premium bats this week.</p>
+                    </div>
+                    <button class="btn-gold" onclick="showPage('products')">Shop Now</button>
+                </div>
+
+                <h2 class="heading-font section-title">Why Choose Us</h2>
+                <div class="benefits-grid">
+                    <div class="benefit-card">
+                        <i class="fas fa-medal"></i>
+                        <h3>Premium Quality</h3>
+                        <p>Top-grade English and Kashmir willow bats from trusted brands.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <i class="fas fa-truck"></i>
+                        <h3>Fast Delivery</h3>
+                        <p>Quick and safe delivery for cricket lovers everywhere.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>Secure Shopping</h3>
+                        <p>Easy checkout with a safe and simple buying experience.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <i class="fas fa-star"></i>
+                        <h3>Top Brands</h3>
+                        <p>Shop MRF, SG, GM, CA, DSC, Reebok, Spartan, and more.</p>
+                    </div>
+                </div>
+
+                <div class="craft-grid">
+                    <div class="craft-item">
+                        <i class="fas fa-leaf"></i>
+                        <h3>Finest English Willow</h3>
+                        <p>Sourced and selected carefully for balance, pickup, and stroke play.</p>
+                    </div>
+                    <div class="craft-item">
+                        <i class="fas fa-gem"></i>
+                        <h3>Hand-crafted Finish</h3>
+                        <p>Each bat is pressed, shaped, and finished for strong performance.</p>
+                    </div>
+                    <div class="craft-item">
+                        <i class="fas fa-trophy"></i>
+                        <h3>Player Preferred</h3>
+                        <p>Designed for both serious beginners and advanced match players.</p>
+                    </div>
+                </div>
+
+                <div class="process-steps">
+                    <div class="step">
+                        <div class="step-icon">1</div>
+                        <h4>Select Cleft</h4>
+                        <p>Premium willow grades chosen carefully</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-icon">2</div>
+                        <h4>Pressing</h4>
+                        <p>Correct compression for bat durability</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-icon">3</div>
+                        <h4>Shaping</h4>
+                        <p>Balanced profile for confident stroke play</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-icon">4</div>
+                        <h4>Finishing</h4>
+                        <p>Grip, polish, and final bat preparation</p>
+                    </div>
+                </div>
+
+                <h2 class="heading-font section-title">What Players Say</h2>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <p>"Excellent bat quality and beautiful finish. The balance is perfect for match play."</p>
+                        <div class="testimonial-name">Arun Kumar</div>
+                    </div>
+                    <div class="testimonial-card">
+                        <p>"Very smooth shopping experience. Delivery was fast and the bat feels premium."</p>
+                        <div class="testimonial-name">Vignesh S</div>
+                    </div>
+                    <div class="testimonial-card">
+                        <p>"I bought an SG bat and the quality exceeded my expectations. Highly recommended."</p>
+                        <div class="testimonial-name">Rahul M</div>
+                    </div>
+                </div>
+
+                <div class="newsletter">
+                    <h2 class="heading-font">Get Exclusive Cricket Offers</h2>
+                    <p>Subscribe to receive new arrivals, discounts, and premium bat updates.</p>
+                    <div class="newsletter-form">
+                        <input type="email" id="newsletterEmail" placeholder="Enter your email">
+                        <button class="btn-gold" id="subscribeBtn">Subscribe</button>
+                    </div>
+                </div>
+
+                <div class="faq-section">
+                    <h2 class="heading-font section-title">Frequently Asked Questions</h2>
+
+                    <div class="faq-item">
+                        <div class="faq-question">Which willow is better: English or Kashmir?</div>
+                        <div class="faq-answer">English willow is usually preferred for premium match bats, while Kashmir willow is a good budget-friendly option for practice and beginners.</div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">Do you offer returns?</div>
+                        <div class="faq-answer">Yes, unused bats can be returned within 7 days in original condition.</div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">How long does delivery take?</div>
+                        <div class="faq-answer">Most orders are delivered within 3 to 7 business days depending on location.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- PRODUCTS PAGE -->
+        <div id="products-page" class="page container">
+            <h2 class="heading-font section-title">All Bats</h2>
+
+            <div class="filter-group">
+                <select id="brandFilter" class="filter-select">
+                    <option value="all">All Brands</option>
+                </select>
+
+                <select id="willowFilter" class="filter-select">
+                    <option value="all">All Willow</option>
+                    <option value="English">English Willow</option>
+                    <option value="Kashmir">Kashmir Willow</option>
+                </select>
+
+                <select id="priceFilter" class="filter-select">
+                    <option value="all">All Prices</option>
+                    <option value="0-200">Under ₹200</option>
+                    <option value="200-500">₹200 - ₹500</option>
+                    <option value="500+">₹500+</option>
+                </select>
+            </div>
+
+            <div class="products-grid" id="product-grid"></div>
+        </div>
+
+        <!-- DETAILS PAGE -->
+        <div id="details-page" class="page container">
+            <div id="detail-view" class="detail-container"></div>
+        </div>
+
+        <!-- CART PAGE -->
+        <div id="cart-page" class="page container">
+            <h2 class="heading-font section-title">Your Bag</h2>
+            <div id="cart-items-list"></div>
+            <div class="cart-total" id="cartTotal"></div>
+            <button class="btn-gold" id="checkoutBtn">Proceed to Checkout</button>
+        </div>
+
+        <!-- CHECKOUT PAGE -->
+        <div id="checkout-page" class="page container">
+            <h2 class="heading-font section-title">Checkout</h2>
+            <div class="checkout-form">
+                <div class="form-group">
+                    <label>Full Name</label>
+                    <input type="text" id="fullName" placeholder="John Doe">
+                </div>
+
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" id="email" placeholder="john@example.com">
+                </div>
+
+                <div class="form-group full">
+                    <label>Address</label>
+                    <input type="text" id="address" placeholder="123 Main Street">
+                </div>
+
+                <div class="form-group">
+                    <label>City</label>
+                    <input type="text" id="city" placeholder="City">
+                </div>
+
+                <div class="form-group">
+                    <label>ZIP Code</label>
+                    <input type="text" id="zip" placeholder="ZIP Code">
+                </div>
+
+                <div class="form-group full">
+                    <button class="btn-gold" id="placeOrderBtn">Place Order</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- CONFIRMATION PAGE -->
+        <div id="confirmation-page" class="page container">
+            <div class="order-confirm-card" id="orderConfirmDetails"></div>
+        </div>
+
+        <!-- ADMIN PAGE -->
+        <div id="admin-page" class="page container">
+            <h2 class="heading-font section-title">Admin Panel</h2>
+
+            <div class="admin-section">
+                <div class="admin-tabs">
+                    <button class="admin-tab active" data-admin="bats">Manage Bats</button>
+                    <button class="admin-tab" data-admin="orders">View Orders</button>
+                    <button class="admin-tab" data-admin="inventory">Inventory</button>
+                </div>
+
+                <div id="admin-bats">
+                    <button class="btn-gold" id="addNewBatBtn" style="margin-bottom:1rem;">
+                        <i class="fas fa-plus"></i> Add New Bat
+                    </button>
+
+                    <table class="admin-table" id="batsTable">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Brand</th>
+                                <th>Model</th>
+                                <th>Willow</th>
+                                <th>Price</th>
+                                <th>Stock</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+
+                <div id="admin-orders" class="hidden">
+                    <table class="admin-table">
+                        <thead>
+                            <tr>
+                                <th>Order ID</th>
+                                <th>Customer</th>
+                                <th>Total</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody id="ordersTable"></tbody>
+                    </table>
+                </div>
+
+                <div id="admin-inventory" class="hidden">
+                    <p id="inventoryStatus">Stock summary will appear here.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ABOUT PAGE -->
+        <div id="about-page" class="page container">
+            <h2 class="heading-font section-title">Craftsmanship</h2>
+            <p style="line-height:1.8; margin-bottom:1rem;">
+                Our cricket bats are chosen with attention to grain quality, balance, pickup, and performance.
+                We bring together trusted brands and premium willow options for players at every level.
+            </p>
+            <p style="line-height:1.8;">
+                From English Willow match bats to durable Kashmir Willow training bats, our collection is designed
+                for quality, confidence, and consistency at the crease.
+            </p>
+        </div>
+
+        <!-- CONTACT PAGE -->
+        <div id="contact-page" class="page container">
+            <h2 class="heading-font section-title">Book Appointment</h2>
+            <p style="line-height:1.8; margin-bottom:1rem;">Visit our premium bat gallery and get help choosing the right bat for your game.</p>
+            <p><strong>Email:</strong> support@cricketbatstore.com</p>
+            <p><strong>Phone:</strong> +91 98765 43210</p>
+            <p><strong>Location:</strong> Chennai, India</p>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-bottom: 2rem;">
+                <div>
+                    <h3 style="color: var(--gold); margin-bottom: 1rem;">Cricket Bat Store</h3>
+                    <p style="line-height: 1.6; opacity: 0.9;">Premium English & Kashmir Willow bats from the world's finest makers. Trusted by players since 1985.</p>
+                </div>
+                <div>
+                    <h4 style="color: var(--gold); margin-bottom: 1rem;">Quick Links</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 0.5rem;"><a href="#" onclick="showPage('home')" style="color: var(--cream); text-decoration: none;">Home</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="#" onclick="showPage('products')" style="color: var(--cream); text-decoration: none;">Shop Bats</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="#" onclick="showPage('about')" style="color: var(--cream); text-decoration: none;">Craftsmanship</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="#" onclick="showPage('contact')" style="color: var(--cream); text-decoration: none;">Book Appointment</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 style="color: var(--gold); margin-bottom: 1rem;">Book Your Appointment</h4>
+                    <p style="line-height: 1.6; opacity: 0.9; margin-bottom: 1rem;">Get personalized bat fitting and expert advice. Visit our gallery in Chennai.</p>
+                    <button class="btn-gold" onclick="showPage('contact')" style="font-size: 0.9rem; padding: 0.6rem 1.2rem;">Schedule Now</button>
+                </div>
+                <div>
+                    <h4 style="color: var(--gold); margin-bottom: 1rem;">Contact Us</h4>
+                    <p style="margin-bottom: 0.5rem;"><i class="fas fa-envelope" style="margin-right: 0.5rem;"></i>support@cricketbatstore.com</p>
+                    <p style="margin-bottom: 0.5rem;"><i class="fas fa-phone" style="margin-right: 0.5rem;"></i>+91 98765 43210</p>
+                    <p style="margin-bottom: 0.5rem;"><i class="fas fa-map-marker-alt" style="margin-right: 0.5rem;"></i>Chennai, India</p>
+                    <div style="margin-top: 1rem;">
+                        <a href="#" style="color: var(--cream); margin-right: 1rem; font-size: 1.2rem;"><i class="fab fa-facebook"></i></a>
+                        <a href="#" style="color: var(--cream); margin-right: 1rem; font-size: 1.2rem;"><i class="fab fa-instagram"></i></a>
+                        <a href="#" style="color: var(--cream); margin-right: 1rem; font-size: 1.2rem;"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 1rem; text-align: center;">
+                <p>© Cricket Bat Store — Premium Supplier Since 1985 | All rights reserved</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        let bats = [
+            { id:'b1', brand:'MRF', model:'Genius Grand', willow:'English', price:450, stock:7, img:'🏏', rating:4.8, description:'Signature bat with a large sweet spot and excellent pickup.' },
+            { id:'b2', brand:'SG', model:'Test Legend', willow:'English', price:380, stock:5, img:'🏏', rating:4.6, description:'Classic English willow bat built for balance and controlled stroke play.' },
+            { id:'b3', brand:'GM', model:'Original', willow:'English', price:520, stock:2, img:'🏏', rating:4.9, description:'Premium profile with powerful edges and refined finishing.' },
+            { id:'b4', brand:'CA', model:'Plus 1000', willow:'Kashmir', price:210, stock:12, img:'🏏', rating:4.2, description:'Reliable Kashmir willow option for developing players.' },
+            { id:'b5', brand:'DSC', model:'Apex', willow:'Kashmir', price:175, stock:8, img:'🏏', rating:4.0, description:'Affordable bat with solid weight distribution and durability.' },
+            { id:'b6', brand:'New Balance', model:'TC 760', willow:'English', price:490, stock:3, img:'🏏', rating:4.7, description:'Stylish premium bat with strong pickup and thick edges.' },
+            { id:'b7', brand:'Reebok', model:'Striker', willow:'Kashmir', price:145, stock:15, img:'🏏', rating:4.1, description:'Comfortable entry-level bat for casual matches and net sessions.' },
+            { id:'b8', brand:'Spartan', model:'MGX', willow:'English', price:600, stock:1, img:'🏏', rating:5.0, description:'High-end English willow bat with excellent rebound and finish.' },
+            { id:'b9', brand:'MRF', model:'Limited Edition', willow:'English', price:750, stock:2, img:'🏏', rating:5.0, description:'Premium limited edition bat designed for serious players.' },
+            { id:'b10', brand:'SG', model:'Club', willow:'Kashmir', price:120, stock:20, img:'🏏', rating:3.9, description:'Budget-friendly bat suitable for beginners and daily practice.' }
+        ];
+
+        let cart = [];
+        let orders = [];
+        let currentDetailId = null;
+
+        function getBatById(id){
+            return bats.find(b => b.id === id);
+        }
+
+        function getCartItemById(id){
+            return cart.find(item => item.id === id);
+        }
+
+        function updateCartCount(){
+            const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+            document.getElementById('cartCount').innerText = totalItems;
+        }
+
+        function showPage(pageId){
+            document.querySelectorAll('.page').forEach(page => {
+                page.classList.remove('active-page');
+            });
+
+            const page = document.getElementById(pageId + '-page');
+            if(page){
+                page.classList.add('active-page');
+            }
+
+            if(pageId === 'products'){
+                applyProductFilters();
+            }
+
+            if(pageId === 'cart'){
+                renderCart();
+            }
+
+            if(pageId === 'details' && currentDetailId){
+                renderDetailView(currentDetailId);
+            }
+
+            if(pageId === 'admin'){
+                renderAdminBats();
+                renderOrders();
+                renderInventory();
+            }
+
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        window.showPage = showPage;
+
+        function renderStars(rating){
+            let full = Math.floor(rating);
+            let half = rating % 1 !== 0 ? '½' : '';
+            return '★'.repeat(full) + half;
+        }
+
+        function renderGrid(containerId, list){
+            const grid = document.getElementById(containerId);
+            if(!grid) return;
+
+            if(list.length === 0){
+                grid.innerHTML = '<p>No bats found.</p>';
+                return;
+            }
+
+            grid.innerHTML = list.map(b => `
+                <div class="product-card card fade-in">
+                    <div class="product-img">${b.img}</div>
+                    <div class="product-category">${b.willow} Willow</div>
+                    <div class="product-title">${b.brand} ${b.model}</div>
+                    <div class="product-rating">${renderStars(b.rating)}</div>
+                    <div class="product-price">₹${b.price}</div>
+                    <div class="product-actions">
+                        <button class="btn-outline-gold view-detail" data-id="${b.id}">View</button>
+                        <button class="btn-gold add-to-cart" data-id="${b.id}">Add</button>
+                    </div>
+                </div>
+            `).join('');
+
+            attachProductEvents();
+        }
+
+        function renderFeatured(list = bats.slice(0,4)){
+            renderGrid('featured-grid', list);
+        }
+
+        function renderAllProducts(list = bats){
+            renderGrid('product-grid', list);
+        }
+
+        function attachProductEvents(){
+            document.querySelectorAll('.view-detail').forEach(btn => {
+                btn.addEventListener('click', function(){
+                    currentDetailId = this.dataset.id;
+                    showPage('details');
+                });
+            });
+
+            document.querySelectorAll('.add-to-cart').forEach(btn => {
+                btn.addEventListener('click', function(){
+                    addToCart(this.dataset.id);
+                    alert('Bat added to cart');
+                });
+            });
+        }
+
+        function renderDetailView(id){
+            const bat = getBatById(id);
+            if(!bat) return;
+
+            document.getElementById('detail-view').innerHTML = `
+                <div class="detail-gallery">${bat.img}</div>
+                <div class="detail-info">
+                    <h2 class="heading-font">${bat.brand} ${bat.model}</h2>
+                    <div class="rating-lg">${renderStars(bat.rating)}</div>
+                    <div class="detail-price">₹${bat.price}</div>
+                    <p class="desc">${bat.description}</p>
+                    <p style="margin-top:1rem;"><strong>Willow:</strong> ${bat.willow}</p>
+                    <p><strong>Stock:</strong> ${bat.stock}</p>
+                    <div class="button-group">
+                        <button class="btn-gold" id="detailAddCart">Add to Cart</button>
+                        <button class="btn-outline-gold" id="detailBuyNow">Buy Now</button>
+                    </div>
+                </div>
+            `;
+
+            document.getElementById('detailAddCart').addEventListener('click', function(){
+                addToCart(id);
+                showPage('cart');
+            });
+
+            document.getElementById('detailBuyNow').addEventListener('click', function(){
+                addToCart(id);
+                showPage('checkout');
+            });
+        }
+
+        function addToCart(id){
+            const item = getCartItemById(id);
+            const bat = getBatById(id);
+
+            if(!bat) return;
+
+            if(item){
+                item.quantity++;
+            } else {
+                cart.push({ id:id, quantity:1 });
+            }
+
+            updateCartCount();
+            renderCart();
+        }
+
+        function renderCart(){
+            const container = document.getElementById('cart-items-list');
+            const totalBox = document.getElementById('cartTotal');
+
+            if(cart.length === 0){
+                container.innerHTML = '<p>Your cart is empty.</p>';
+                totalBox.innerHTML = '';
+                return;
+            }
+
+            let total = 0;
+
+            container.innerHTML = cart.map(item => {
+                const bat = getBatById(item.id);
+                if(!bat) return '';
+
+                total += bat.price * item.quantity;
+
+                return `
+                    <div class="cart-item">
+                        <div class="cart-img">${bat.img}</div>
+                        <div class="cart-details">
+                            <h4>${bat.brand} ${bat.model}</h4>
+                            <p>₹${bat.price} x ${item.quantity}</p>
+                        </div>
+                        <div class="cart-qty">
+                            <button class="qty-dec" data-id="${item.id}">−</button>
+                            <span>${item.quantity}</span>
+                            <button class="qty-inc" data-id="${item.id}">+</button>
+                        </div>
+                        <div>
+                            <button class="btn-outline-gold remove-item" data-id="${item.id}">Remove</button>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+
+            totalBox.innerHTML = `Total: ₹${total}`;
+
+            document.querySelectorAll('.qty-inc').forEach(btn => {
+                btn.addEventListener('click', function(){
+                    const item = getCartItemById(this.dataset.id);
+                    if(item){
+                        item.quantity++;
+                        updateCartCount();
+                        renderCart();
+                    }
+                });
+            });
+
+            document.querySelectorAll('.qty-dec').forEach(btn => {
+                btn.addEventListener('click', function(){
+                    const item = getCartItemById(this.dataset.id);
+                    if(item){
+                        item.quantity--;
+                        if(item.quantity <= 0){
+                            cart = cart.filter(c => c.id !== this.dataset.id);
+                        }
+                        updateCartCount();
+                        renderCart();
+                    }
+                });
+            });
+
+            document.querySelectorAll('.remove-item').forEach(btn => {
+                btn.addEventListener('click', function(){
+                    cart = cart.filter(c => c.id !== this.dataset.id);
+                    updateCartCount();
+                    renderCart();
+                });
+            });
+        }
+
+        function populateFilters(){
+            const brandSelect = document.getElementById('brandFilter');
+            const brands = [...new Set(bats.map(b => b.brand))];
+
+            brandSelect.innerHTML = '<option value="all">All Brands</option>' +
+                brands.map(brand => `<option value="${brand}">${brand}</option>`).join('');
+
+            document.getElementById('brandFilter').addEventListener('change', applyProductFilters);
+            document.getElementById('willowFilter').addEventListener('change', applyProductFilters);
+            document.getElementById('priceFilter').addEventListener('change', applyProductFilters);
+        }
+
+        function applyProductFilters(){
+            let filtered = [...bats];
+
+            const brand = document.getElementById('brandFilter').value;
+            const willow = document.getElementById('willowFilter').value;
+            const price = document.getElementById('priceFilter').value;
+
+            if(brand !== 'all'){
+                filtered = filtered.filter(b => b.brand === brand);
+            }
+
+            if(willow !== 'all'){
+                filtered = filtered.filter(b => b.willow === willow);
+            }
+
+            if(price === '0-200'){
+                filtered = filtered.filter(b => b.price < 200);
+            } else if(price === '200-500'){
+                filtered = filtered.filter(b => b.price >= 200 && b.price <= 500);
+            } else if(price === '500+'){
+                filtered = filtered.filter(b => b.price > 500);
+            }
+
+            renderAllProducts(filtered);
+        }
+
+        function renderAdminBats(){
+            const tbody = document.querySelector('#batsTable tbody');
+            tbody.innerHTML = bats.map(b => `
+                <tr>
+                    <td>${b.id}</td>
+                    <td>${b.brand}</td>
+                    <td>${b.model}</td>
+                    <td>${b.willow}</td>
+                    <td>$${b.price}</td>
+                    <td>${b.stock}</td>
+                    <td class="admin-actions">
+                        <i class="fas fa-edit" title="Edit"></i>
+                        <i class="fas fa-trash" title="Delete"></i>
+                    </td>
+                </tr>
+            `).join('');
+        }
+
+        function renderOrders(){
+            const ordersTable = document.getElementById('ordersTable');
+
+            if(orders.length === 0){
+                ordersTable.innerHTML = '<tr><td colspan="4">No orders yet</td></tr>';
+                return;
+            }
+
+            ordersTable.innerHTML = orders.map(order => `
+                <tr>
+                    <td>${order.orderId}</td>
+                    <td>${order.name}</td>
+                    <td>₹${order.totalPrice}</td>
+                    <td>Confirmed</td>
+                </tr>
+            `).join('');
+        }
+
+        function renderInventory(){
+            const lowStock = bats.filter(b => b.stock < 5).length;
+            document.getElementById('inventoryStatus').innerText =
+                `Stock low: ${lowStock} bat(s) are below 5 units.`;
+        }
+
+        document.querySelectorAll('[data-page]').forEach(link => {
+            link.addEventListener('click', function(e){
+                e.preventDefault();
+                showPage(this.dataset.page);
+            });
+        });
+
+        document.querySelectorAll('.pill').forEach(pill => {
+            pill.addEventListener('click', function(){
+                document.querySelectorAll('.pill').forEach(p => p.classList.remove('active'));
+                this.classList.add('active');
+
+                const willow = this.dataset.willow;
+
+                if(willow === 'all'){
+                    renderFeatured(bats.slice(0,4));
+                } else {
+                    renderFeatured(bats.filter(b => b.willow === willow).slice(0,4));
+                }
+            });
+        });
+
+        document.getElementById('homeSearch').addEventListener('keyup', function(e){
+            if(e.key === 'Enter'){
+                runHomeSearch();
+            }
+        });
+
+        document.getElementById('homeSearchBtn').addEventListener('click', runHomeSearch);
+
+        function runHomeSearch(){
+            const term = document.getElementById('homeSearch').value.trim().toLowerCase();
+
+            const filtered = bats.filter(b =>
+                b.brand.toLowerCase().includes(term) ||
+                b.model.toLowerCase().includes(term) ||
+                b.willow.toLowerCase().includes(term)
+            );
+
+            showPage('products');
+            renderAllProducts(filtered);
+        }
+
+        document.getElementById('checkoutBtn').addEventListener('click', function(){
+            if(cart.length === 0){
+                alert('Your cart is empty');
+                return;
+            }
+            showPage('checkout');
+        });
+
+        document.getElementById('placeOrderBtn').addEventListener('click', function(){
+            const name = document.getElementById('fullName').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const address = document.getElementById('address').value.trim();
+            const city = document.getElementById('city').value.trim();
+            const zip = document.getElementById('zip').value.trim();
+
+            if(cart.length === 0){
+                alert('Your cart is empty');
+                return;
+            }
+
+            if(!name || !email || !address || !city || !zip){
+                alert('Please fill all checkout fields');
+                return;
+            }
+
+            const orderId = 'ORD' + Math.floor(Math.random() * 100000);
+            const totalPrice = cart.reduce((sum, item) => {
+                const bat = getBatById(item.id);
+                return sum + (bat.price * item.quantity);
+            }, 0);
+
+            const orderItems = cart.map(item => {
+                const bat = getBatById(item.id);
+                return `${bat.brand} ${bat.model} (x${item.quantity})`;
+            }).join(', ');
+
+            orders.push({
+                orderId,
+                name,
+                email,
+                address,
+                totalPrice,
+                items: orderItems
+            });
+
+            document.getElementById('orderConfirmDetails').innerHTML = `
+                <h3>Thank you, ${name}!</h3>
+                <p style="margin-top:1rem;"><strong>Order ID:</strong> ${orderId}</p>
+                <p><strong>Email:</strong> ${email}</p>
+                <p><strong>Shipping Address:</strong> ${address}, ${city} - ${zip}</p>
+                <p><strong>Items:</strong> ${orderItems}</p>
+                <p><strong>Total:</strong> ₹${totalPrice}</p>
+            `;
+
+            cart = [];
+            updateCartCount();
+            renderOrders();
+            showPage('confirmation');
+        });
+
+        document.querySelectorAll('.faq-item').forEach(item => {
+            item.addEventListener('click', function(){
+                this.classList.toggle('active');
+            });
+        });
+
+        document.getElementById('subscribeBtn').addEventListener('click', function(){
+            const email = document.getElementById('newsletterEmail').value.trim();
+
+            if(email === ''){
+                alert('Please enter your email');
+                return;
+            }
+
+            alert('Thank you for subscribing!');
+            document.getElementById('newsletterEmail').value = '';
+        });
+
+        document.querySelectorAll('.admin-tab').forEach(tab => {
+            tab.addEventListener('click', function(){
+                document.querySelectorAll('.admin-tab').forEach(t => t.classList.remove('active'));
+                this.classList.add('active');
+
+                document.getElementById('admin-bats').classList.add('hidden');
+                document.getElementById('admin-orders').classList.add('hidden');
+                document.getElementById('admin-inventory').classList.add('hidden');
+
+                if(this.dataset.admin === 'bats'){
+                    document.getElementById('admin-bats').classList.remove('hidden');
+                } else if(this.dataset.admin === 'orders'){
+                    document.getElementById('admin-orders').classList.remove('hidden');
+                } else if(this.dataset.admin === 'inventory'){
+                    document.getElementById('admin-inventory').classList.remove('hidden');
+                }
+            });
+        });
+
+        document.getElementById('addNewBatBtn').addEventListener('click', function(){
+            alert('This is a demo admin panel. Add new bat form can be added next.');
+        });
+
+        renderFeatured();
+        renderAllProducts();
+        populateFilters();
+        updateCartCount();
+    </script>
+</body>
+</html>
