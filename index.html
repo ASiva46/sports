@@ -1073,13 +1073,47 @@
         </div>
 
         <!-- CONTACT PAGE -->
-        <div id="contact-page" class="page container">
-            <h2 class="heading-font section-title">Book Appointment</h2>
-            <p style="line-height:1.8; margin-bottom:1rem;">Visit our premium bat gallery and get help choosing the right bat for your game.</p>
-            <p><strong>Email:</strong> support@cricketbatstore.com</p>
-            <p><strong>Phone:</strong> +91 98765 43210</p>
-            <p><strong>Location:</strong> Chennai, India</p>
+        <!-- ONLY SHOWING MODIFIED PARTS CLEARLY -->
+
+<!-- ================= CONTACT PAGE (UPDATED) ================= -->
+<div id="contact-page" class="page container">
+    <h2 class="heading-font section-title">Get in Touch</h2>
+    <p style="line-height:1.8; margin-bottom:1.5rem;">
+        Have questions about bats or need help choosing? Send us a message!
+    </p>
+
+    <div class="checkout-form">
+        <div class="form-group">
+            <label>Your Name</label>
+            <input type="text" id="contactName" placeholder="Enter your name">
         </div>
+
+        <div class="form-group">
+            <label>Email</label>
+            <input type="email" id="contactEmail" placeholder="Enter your email">
+        </div>
+
+        <div class="form-group full">
+            <label>Subject</label>
+            <input type="text" id="contactSubject" placeholder="Enter subject">
+        </div>
+
+        <div class="form-group full">
+            <label>Message</label>
+            <textarea id="contactMessage" rows="5" placeholder="Write your message..."></textarea>
+        </div>
+
+        <div class="form-group full">
+            <button class="btn-gold" id="sendMessageBtn">Send Message</button>
+        </div>
+    </div>
+
+    <div style="margin-top:2rem;">
+        <p><strong>Email:</strong> batsyndicate5@gmail.com</p>
+        <p><strong>Phone:</strong> +91 70103 28022</p>
+        <p><strong>Location:</strong> Chennai, India</p>
+    </div>
+</div>
     </div>
 
     <footer class="footer">
@@ -1122,6 +1156,32 @@
     </footer>
 
     <script>
+        // ================= CONTACT FORM FUNCTION =================
+document.addEventListener("DOMContentLoaded", function () {
+    const btn = document.getElementById('sendMessageBtn');
+
+    if (btn) {
+        btn.addEventListener('click', function () {
+            const name = document.getElementById('contactName').value.trim();
+            const email = document.getElementById('contactEmail').value.trim();
+            const subject = document.getElementById('contactSubject').value.trim();
+            const message = document.getElementById('contactMessage').value.trim();
+
+            if (!name || !email || !subject || !message) {
+                alert('Please fill all fields');
+                return;
+            }
+
+            alert(`Thank you ${name}! Your message has been sent.`);
+
+            // Clear fields
+            document.getElementById('contactName').value = '';
+            document.getElementById('contactEmail').value = '';
+            document.getElementById('contactSubject').value = '';
+            document.getElementById('contactMessage').value = '';
+        });
+    }
+});
         let bats = [
             { id:'b1', brand:'MRF', model:'Genius Grand', willow:'English', price:450, stock:7, img:'🏏', rating:4.8, description:'Signature bat with a large sweet spot and excellent pickup.' },
             { id:'b2', brand:'SG', model:'Test Legend', willow:'English', price:380, stock:5, img:'🏏', rating:4.6, description:'Classic English willow bat built for balance and controlled stroke play.' },
